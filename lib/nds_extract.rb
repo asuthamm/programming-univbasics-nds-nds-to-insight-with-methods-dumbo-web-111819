@@ -7,8 +7,22 @@ require 'directors_database'
 
 def directors_totals(nds)
   result = {}
-  nil
+  #
+  idx1 = 0
+  while idx1 < directors_database.length
+    sum=0
+    idx2 = 0
+    while idx2 < directors_database[idx1][:movies].length
+      # p director_database[idx1][:movies][idx2][:worldwide_gross]
+      sum += directors_database[idx1][:movies][idx2][:worldwide_gross]
+      idx2 +=1
+    end
+    result[directors_database[idx1][:name]] = sum
+    idx1 +=1
+  end
+  result
 end
+
 
 # Find a way to accumulate the :worldwide_grosses and return that Integer
 # using director_data as input
