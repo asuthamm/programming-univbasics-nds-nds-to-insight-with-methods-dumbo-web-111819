@@ -7,14 +7,12 @@ require 'pp'
 
 def directors_totals(nds)
   result = {}
-  #
-  idx1 = 0
-  while idx1 < nds.length
-    result[nds[idx1][:name]] = gross_for_director(nds,idx1)
-    idx1 +=1
-  end
-  result
+  result = gross_for_director(nds)
+
+  result 
 end
+
+
 
 
 # Find a way to accumulate the :worldwide_grosses and return that Integer
