@@ -4,7 +4,7 @@ require 'pp'
 # The return value should be like:
 #
 
-pp directors_database[0]
+pp directors_database[1]
 # { directorOne => allTheMoneyTheyMade, ... }
 
 # def directors_totals(nds)
