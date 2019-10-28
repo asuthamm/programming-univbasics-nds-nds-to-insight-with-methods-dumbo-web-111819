@@ -19,5 +19,14 @@ end
 
 # Find a way to accumulate the :worldwide_grosses and return that Integer
 # using director_data as input
-def gross_for_director(director_data)
+def gross_for_director(nds,idx1)
+
+  sum=0
+  idx2 = 0
+  while idx2 < nds[idx1][:movies].length
+    # p director_database[idx1][:movies][idx2][:worldwide_gross]
+    sum += nds[idx1][:movies][idx2][:worldwide_gross]
+    idx2 +=1
+  end
+  sum
 end
